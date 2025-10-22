@@ -1,7 +1,4 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Main.java to edit this template
- */
+//GAUTHIER 22 /10/2025 TP1  Saisie et manipulation de nombres 
 package tp1_manipnombresint_gauthier;
 
 import static java.lang.System.in;
