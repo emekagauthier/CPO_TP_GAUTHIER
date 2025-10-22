@@ -45,7 +45,7 @@ public class TP1_manipNombresInt_GAUTHIER {
         
         //Afficher le quotient entier
         divis=nb1/nb2;
-        System.out.println("Le quotient enter est "+divis);
+        System.out.println("Le quotient entier est "+divis);
         
         //Afficher le reste
         rest= nb1 % nb2 ;
