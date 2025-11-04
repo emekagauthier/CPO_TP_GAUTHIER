@@ -26,11 +26,12 @@ public class TP2_manip_GAUTHIER {
     
     //Aucun des ligne suivant ne sont correcte
     //Moussaka assiette666 = assiette1 ;
-    //Moussaka assiette667 = new Tartiflette() ;    
+    //Moussaka assiette667 = new Tartiflette() ;
+    // il n'est pas possible de référencer un type d'objet ci l'objet n'a aucun rapport avec la reférence
     
     Moussaka tab[] = new Moussaka[10];
     for (int i =0 ; i!=10 ; i++){
-        tab[i] = new Moussaka();  // création de 10 object designer danx chaque case
+        tab[i] = new Moussaka();  // création de 10 objets designer danx chaque case
     }
     
     
