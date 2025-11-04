@@ -10,8 +10,10 @@ package tp2_manip_gauthier;
  */
 public class Moussaka {
     int nbCalories ;
-    public Moussaka () {
-    nbCalories = 0 ;
+
+    public Moussaka(int nbCalories) {
+        this.nbCalories = nbCalories;
     }
+    
 
 }

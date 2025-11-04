@@ -31,7 +31,7 @@ public class TP2_manip_GAUTHIER {
     
     Moussaka tab[] = new Moussaka[10];
     for (int i =0 ; i!=10 ; i++){
-        tab[i] = new Moussaka();  // création de 10 objets designer danx chaque case
+        tab[i] = new Moussaka(i*100);  // création de 10 objets designer danx chaque case
     }
     
     
