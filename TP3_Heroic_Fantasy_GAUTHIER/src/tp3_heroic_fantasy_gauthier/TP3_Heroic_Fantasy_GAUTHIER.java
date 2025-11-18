@@ -1,6 +1,11 @@
 
 package tp3_heroic_fantasy_gauthier;
 
+import Armes.Epee;
+import Armes.Baton;
+import Armes.Arme;
+import java.util.ArrayList;
+
 /**
  *
  * @author emeka
@@ -21,7 +26,21 @@ public class TP3_Heroic_Fantasy_GAUTHIER {
         Baton Charme = new Baton(5,6,"Charme");
         
         // Test pour vérifier que l'objet Durandal est bien crée
-        System.out.println(Chêne);
+        //System.out.println(Chêne);
+       
+        //Creation d'un tableau dynamique
+        ArrayList<Arme> lstArmes = new ArrayList<Arme>();
+        lstArmes.add(Durandal);
+        lstArmes.add(Excalibur);
+        lstArmes.add(Chêne);
+        lstArmes.add(Charme);
+        // System.out.println(Armes.size());
+        for(int i = 0 ; i<lstArmes.size(); i++ ) {
+            System.out.println(lstArmes.get(i));
+        }
+        //Creation de 2 personnage magicien
+       Magicien Gandalf = new Magicien (true , "Gandalf", 65);
+       
         
         
         
