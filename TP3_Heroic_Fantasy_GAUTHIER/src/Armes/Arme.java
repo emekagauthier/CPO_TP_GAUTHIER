@@ -1,5 +1,5 @@
 
-package tp3_heroic_fantasy_gauthier;
+package Armes;
 
 /**
  *
