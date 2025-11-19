@@ -16,9 +16,22 @@ public class Guerrier extends Personnage{
         this.cheval = cheval;
     }
 
+    
+
     public void setConfirmer(boolean cheval) {
         this.cheval = cheval;
     }
     
+    @Override
+    public String toString() {
+        String r = super.toString();
+        if ( this.cheval == true ){
+           return r + "Guerrier{" + "Cheval : " + "OUI" + '}'; 
+        }
+        else{
+            return r+" Guerrier{" + "Cheval : " + "NON" + '}'; 
+        }
+        
+    }
     
 }

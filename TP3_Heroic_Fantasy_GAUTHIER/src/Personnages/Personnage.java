@@ -38,7 +38,7 @@ Arme Arme_en_Main = null ;
     
     public String chooseArme(Arme nomarme){
         boolean verif ;
-        verif = inventaire.contains(nomarme);
+        verif = this.inventaire.contains(nomarme);
         if (verif == true){
             this.Arme_en_Main = nomarme;
             return "L'arme a été trouvé dans l'inventaire et affecter au personnage" ;
@@ -49,9 +49,13 @@ Arme Arme_en_Main = null ;
         
     }
     public Arme recuparmeinventaire(int position){
-        return this.inventaire.get(position);
-    }       
-    @Override
+        return this.inventaire.get(position); 
+    }
+    public int sizeinventaire(){
+        return this.inventaire.size();
+    }
+    
+    /*@Override
     public String toString() {
         if(this.Arme_en_Main != null){
          return "L'aventurier se nomme " + nom + " et il a actuellement: "+ niv_de_vie +" de HP" + ". l'arme que le personnage a dans ses mains est : " + Arme_en_Main;   
@@ -60,6 +64,11 @@ Arme Arme_en_Main = null ;
             return "L'aventurier se nomme " + nom + " et il a actuellement: "+ niv_de_vie +" de HP" + ". Le personnage n'a pas d'arme dans ces mains ";
         }
         
+    }*/
+
+    @Override
+    public String toString() {
+        return "Personnage{" + "nom=" + nom + ", niv_de_vie=" + niv_de_vie + ", inventaire=" + inventaire + ", Arme_en_Main=" + Arme_en_Main + '}';
     }
 
 }

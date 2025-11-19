@@ -19,6 +19,18 @@ public class Magicien extends Personnage {
     public void setConfirmer(boolean confirmer) {
         this.confirmer = confirmer;
     }
+
+    @Override
+    public String toString() {
+        String r = super.toString();
+        if ( this.confirmer == true ){
+           return r + "Magicien{" + "confirmer : " + "OUI" + '}'; 
+        }
+        else{
+            return r + "Magicien{" + "confirmer : " + "NON" + '}'; 
+        }
+        
+    }
     
     
    

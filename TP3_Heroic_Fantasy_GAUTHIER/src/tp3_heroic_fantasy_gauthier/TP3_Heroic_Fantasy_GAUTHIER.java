@@ -35,7 +35,7 @@ public class TP3_Heroic_Fantasy_GAUTHIER {
         // Test pour vérifier que l'objet Durandal est bien crée
         //System.out.println(Chêne);
        
-        //Creation d'un tableau dynamique
+/*        //Creation d'un tableau dynamique
         ArrayList<Arme> lstArmes = new ArrayList<Arme>();
         lstArmes.add(Durandal);
         lstArmes.add(Excalibur);
@@ -45,6 +45,7 @@ public class TP3_Heroic_Fantasy_GAUTHIER {
         for(int i = 0 ; i<lstArmes.size(); i++ ) {
             System.out.println(lstArmes.get(i));
         }
+*/
         //Creation de 2 personnage magicien
        Magicien Gandalf = new Magicien (true , "Gandalf", 65);
        //"Garcimore",44,novice. 
@@ -52,7 +53,7 @@ public class TP3_Heroic_Fantasy_GAUTHIER {
        //creation de 2 guerrier : "Conan", 78, à pied et "Lannister", 45, à cheval. 
        Guerrier Conan =  new Guerrier( false, "Conan",78);
        Guerrier Lannister =  new Guerrier( true , "Lannister",45);
-       
+       /*
        // Tableau dynamique contenant les personnages
        ArrayList<Personnage> lstpersos = new ArrayList<Personnage>();
         lstpersos.add(Gandalf);
@@ -63,6 +64,7 @@ public class TP3_Heroic_Fantasy_GAUTHIER {
         for(int i = 0 ; i<lstpersos.size(); i++ ) {
             System.out.println(lstpersos.get(i));
         }
+*/
         // Ajouter 1 baton et 2  épée dans l'inventaire d'un guerrier
         Conan.getArmes(Chêne);
         Conan.getArmes(Excalibur);
@@ -75,15 +77,20 @@ public class TP3_Heroic_Fantasy_GAUTHIER {
         Gandalf.getArmes(Noir);
         Gandalf.getArmes(Morgan);
         int nbarmesprefbaton = 0 ;
-        for (int i = 0 ; i< 5 ; i++){
+        for (int i = 0 ; i< Gandalf.sizeinventaire() ; i++){
             if ( Gandalf.recuparmeinventaire(i) instanceof Baton ){
                 nbarmesprefbaton+=1 ;
         }
-        System.out.println("le nombre de baton dans l'aventaire du magicien est de " + nbarmesprefbaton ) ;
+        }
+        //System.out.println("le nombre de baton dans l'aventaire du magicien est de " + nbarmesprefbaton ) ;
+        
+        // affiche toute les caracteristique des personnage de Conan et Gandalf
+        System.out.println(Conan);
+        System.out.println(Gandalf);
         
         
-        // TODO code application logic here
-    }
+       
+    
     
 }
 }
