@@ -14,12 +14,17 @@ public class Guerrier extends Personnage{
     public Guerrier(boolean cheval, String nom, int niv_de_vie) {
         super(nom, niv_de_vie);
         this.cheval = cheval;
+        nb_guerrier+=1 ;
     }
 
     
 
     public void setConfirmer(boolean cheval) {
         this.cheval = cheval;
+    }
+    
+    public static int nbguerriers(){
+        return nb_guerrier;
     }
     
     @Override

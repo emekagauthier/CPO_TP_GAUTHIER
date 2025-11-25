@@ -15,7 +15,11 @@ public abstract class Personnage {
 //Attribut
 String nom ;
 int niv_de_vie;
+static int nb_personnage = 0 ;
+static int nb_magiciens = 0 ;
+static int nb_guerrier = 0 ;
 
+ArrayList<Personnage> lstPersonnages = new ArrayList<Personnage>();
 ArrayList<Arme> inventaire = new ArrayList<Arme>();
 Arme Arme_en_Main = null ;
 
@@ -23,6 +27,8 @@ Arme Arme_en_Main = null ;
     public Personnage(String nom, int niv_de_vie) {
         this.nom = nom;
         this.niv_de_vie = niv_de_vie;
+        nb_personnage+=1 ;
+       
     }
     public void getArmes(Arme newarme){
         if (inventaire.size()==5){
@@ -65,10 +71,26 @@ Arme Arme_en_Main = null ;
         }
         
     }*/
-
+    public static int   nbperso(){
+        return nb_personnage ;
+    }
+    
+    public void finalize(String type ){
+        nb_personnage-=1;
+        if (type == "Magicien"){
+            nb_magiciens-=1 ;
+        }
+        else {
+            nb_guerrier -= 1 ;
+        }
+        
+        
+    }
+    
     @Override
     public String toString() {
         return "Personnage{" + "nom=" + nom + ", niv_de_vie=" + niv_de_vie + ", inventaire=" + inventaire + ", Arme_en_Main=" + Arme_en_Main + '}';
     }
+    
 
 }

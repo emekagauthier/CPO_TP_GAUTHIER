@@ -14,10 +14,15 @@ public class Magicien extends Personnage {
     public Magicien(boolean confirmer, String nom, int niv_de_vie) {
         super(nom, niv_de_vie);
         this.confirmer = confirmer;
+        nb_magiciens +=1 ;
     }
 
     public void setConfirmer(boolean confirmer) {
         this.confirmer = confirmer;
+    }
+    
+    public static int nbmagiciens(){
+        return nb_magiciens ;
     }
 
     @Override

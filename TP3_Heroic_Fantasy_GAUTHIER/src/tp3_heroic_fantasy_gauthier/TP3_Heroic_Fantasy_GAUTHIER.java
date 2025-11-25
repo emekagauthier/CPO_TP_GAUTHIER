@@ -88,7 +88,16 @@ public class TP3_Heroic_Fantasy_GAUTHIER {
         System.out.println(Conan);
         System.out.println(Gandalf);
         
+     
         
+        //Affiche le nombre de personnage puis de guerrier puis de magicien 
+        System.out.println("Le nombre de personnages est de : " + Personnage.nbperso());
+        System.out.println("Le nombre de guerriers est de : " + Guerrier.nbguerriers());
+        System.out.println("Le nombre de personnages est de : " + Magicien.nbmagiciens());
+        
+        
+        
+        Gandalf.finalize("Magicien");
        
     
     
