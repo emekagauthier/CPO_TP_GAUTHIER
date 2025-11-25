@@ -6,12 +6,13 @@ package Personnages;
 
 import Armes.Arme;
 import java.util.ArrayList;
+import tp3_heroic_fantasy_gauthier.EtreVivant;
 
 /**
  *
  * @author emeka
  */
-public abstract class Personnage {
+public abstract class Personnage implements EtreVivant {
 //Attribut
 String nom ;
 int niv_de_vie;
@@ -83,9 +84,24 @@ Arme Arme_en_Main = null ;
         else {
             nb_guerrier -= 1 ;
         }
-        
-        
     }
+        @Override
+        public void seFatiguer() {
+        niv_de_vie -= 10; }
+        
+        @Override
+        public boolean estVivant() {
+        return niv_de_vie > 0;
+                        }
+        @Override
+        public void estAttaqué(int points) {
+        niv_de_vie -= points;
+        }
+
+
+
+        
+    
     
     @Override
     public String toString() {
