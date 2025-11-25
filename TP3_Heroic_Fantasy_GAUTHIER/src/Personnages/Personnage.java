@@ -20,7 +20,6 @@ static int nb_personnage = 0 ;
 static int nb_magiciens = 0 ;
 static int nb_guerrier = 0 ;
 
-ArrayList<Personnage> lstPersonnages = new ArrayList<Personnage>();
 ArrayList<Arme> inventaire = new ArrayList<Arme>();
 Arme Arme_en_Main = null ;
 
@@ -62,6 +61,11 @@ Arme Arme_en_Main = null ;
         return this.inventaire.size();
     }
     
+    public int pointdevie(){
+        return niv_de_vie ;
+        
+    }
+    
     /*@Override
     public String toString() {
         if(this.Arme_en_Main != null){
@@ -97,10 +101,11 @@ Arme Arme_en_Main = null ;
         public void estAttaqué(int points) {
         niv_de_vie -= points;
         }
+    
+        public void attaquer(Personnage cible) {
+    
+            }
 
-
-
-        
     
     
     @Override

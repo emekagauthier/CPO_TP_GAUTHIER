@@ -11,15 +11,18 @@ import Armes.Arme;
  * @author emeka
  */
 public class Epee extends Arme {
-    int âge ;
+    int finesse ;
 
-    public Epee(int âge, int niv_att, String nom_arme) {
+    public Epee(int finesse, int niv_att, String nom_arme) {
         super(niv_att, nom_arme);
-        if (âge>=100) {
-        this.âge = 99;}
+        if (finesse>=100) {
+        this.finesse = 99;}
        else{
-           this.âge= âge;
+           this.finesse= finesse;
        }
        }
+    public int getfinesse(){
+        return finesse ;
+    }
     
 }

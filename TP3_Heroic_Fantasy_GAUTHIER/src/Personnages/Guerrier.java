@@ -4,6 +4,10 @@
  */
 package Personnages;
 
+import Armes.Arme;
+import Armes.Baton;
+import Armes.Epee;
+
 /**
  *
  * @author emeka
@@ -26,6 +30,26 @@ public class Guerrier extends Personnage{
     public static int nbguerriers(){
         return nb_guerrier;
     }
+    @Override
+    public void attaquer(Personnage cible) {
+        int nivattque ;
+        Arme equipement = cible.getArmeenMain() ;
+        nivattque = equipement.nivattaque();
+        
+        if (equipement instanceof Epee) {
+            nivattque *= ((Epee) equipement).getfinesse(); 
+        /* Posser des question sur cette notation donnée par chatgpt
+            Elle me permet de confirmer equipement en tant qu baton et de d'aller cherché dans la classe fille Baton son age */
+        }
+        this.seFatiguer();
+        
+        if (cheval) {
+            nivattque /= 2;
+        }
+        
+        cible.estAttaqué(nivattque);
+    }
+    
     
     @Override
     public String toString() {

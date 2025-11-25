@@ -17,6 +17,10 @@ public abstract class Arme {
         }
         this.nom_arme = nom_arme;
     }
+    public int nivattaque(){
+        return this.niv_att ;
+    }
+    
 
     @Override
     public String toString() {

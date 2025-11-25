@@ -11,15 +11,18 @@ import Armes.Arme;
  * @author emeka
  */
 public class Baton extends Arme{
-    int indice ;
+    int age ;
 
-    public Baton(int indice, int niv_att, String nom_arme) {
+    public Baton(int age, int niv_att, String nom_arme) {
         super(niv_att, nom_arme);
-       if (indice>=100) {
-        this.indice = 99;}
+       if (age>=100) {
+        this.age = 99;}
        else{
-           this.indice= indice;
+           this.age= age;
        }
+    }
+    public int getage(){
+        return age ;
     }
     
     
