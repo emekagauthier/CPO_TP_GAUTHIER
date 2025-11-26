@@ -18,6 +18,7 @@ public class FenetreQuiz extends javax.swing.JFrame {
     Question Quizz2 = new Question("Repond a ma question2","je 2suis", "je ne suis pas","je suis la","je pars", 2);
     Question Quizz3 = new Question("Repond a ma question3","je 3suis", "je ne suis pas","je suis la","je pars", 3);
     Question Quizz4 = new Question("Repond a ma question4","je 4suis", "je ne suis pas","je suis la","je pars", 4);
+    Question Quizz5 = new Question("Repond a ma question5","je 5suis", "je ne suis pas","je suis la","je pars", 1);
     private int compteur = 0 ;
     private int score = 0 ;
     ArrayList<Question> tab = new ArrayList<Question>();
@@ -34,6 +35,7 @@ public class FenetreQuiz extends javax.swing.JFrame {
         tab.add(Quizz2);
         tab.add(Quizz3);
         tab.add(Quizz4);
+        tab.add(Quizz5);
         Question question = tab.get(0);
         
        
