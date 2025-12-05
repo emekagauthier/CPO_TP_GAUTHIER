@@ -10,7 +10,9 @@
 public class Interface extends javax.swing.JFrame {
     
     private static final java.util.logging.Logger logger = java.util.logging.Logger.getLogger(Interface.class.getName());
-
+    Cadenas Solution = new Cadenas(1,2,3,4);
+    Cadenas Combinaison_now = new Cadenas(0,0,0,0);
+    
     /**
      * Creates new form Interface
      */
@@ -191,7 +193,8 @@ public class Interface extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void bt_up_1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bt_up_1ActionPerformed
-        nb_chiffre_case_1.setText("1");
+        Combinaison_now.upVal_case1();
+       
     }//GEN-LAST:event_bt_up_1ActionPerformed
 
     private void bt_down_1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bt_down_1ActionPerformed
@@ -199,7 +202,8 @@ public class Interface extends javax.swing.JFrame {
     }//GEN-LAST:event_bt_down_1ActionPerformed
 
     private void bt_down_2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bt_down_2ActionPerformed
-        // TODO add your handling code here:
+        int a = Combinaison_now.getVal_case1();
+        nb_chiffre_case_2.setText(a + "");
     }//GEN-LAST:event_bt_down_2ActionPerformed
 
     private void bt_down_3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bt_down_3ActionPerformed
