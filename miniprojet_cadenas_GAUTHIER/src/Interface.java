@@ -10,6 +10,7 @@
 public class Interface extends javax.swing.JFrame {
     
     private static final java.util.logging.Logger logger = java.util.logging.Logger.getLogger(Interface.class.getName());
+    // objet Cadenas Test
     Cadenas Solution = new Cadenas(1,2,3,4);
     Cadenas Combinaison_now = new Cadenas(0,0,0,0);
     
@@ -149,6 +150,11 @@ public class Interface extends javax.swing.JFrame {
         getContentPane().add(bt_up_4, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 60, 80, 20));
 
         bt_test.setText("Tester");
+        bt_test.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                bt_testActionPerformed(evt);
+            }
+        });
         getContentPane().add(bt_test, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 110, -1, -1));
 
         txt_chiffre_trop_bas.setText("Nombre de chiffres trop bas : ");
@@ -193,38 +199,49 @@ public class Interface extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void bt_up_1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bt_up_1ActionPerformed
-        Combinaison_now.upVal_case1();
+        Combinaison_now.upval_case(0);
+        nb_chiffre_case_1.setText(Combinaison_now.getval_case(0) + "");
        
     }//GEN-LAST:event_bt_up_1ActionPerformed
 
     private void bt_down_1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bt_down_1ActionPerformed
-        // TODO add your handling code here:
+        Combinaison_now.downval_case(0);
+        nb_chiffre_case_1.setText(Combinaison_now.getval_case(0) + "");
     }//GEN-LAST:event_bt_down_1ActionPerformed
 
     private void bt_down_2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bt_down_2ActionPerformed
-        int a = Combinaison_now.getVal_case1();
-        nb_chiffre_case_2.setText(a + "");
+        Combinaison_now.downval_case(1);
+        nb_chiffre_case_2.setText(Combinaison_now.getval_case(1) + "");
     }//GEN-LAST:event_bt_down_2ActionPerformed
 
     private void bt_down_3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bt_down_3ActionPerformed
-        // TODO add your handling code here:
+       Combinaison_now.downval_case(2);
+        nb_chiffre_case_3.setText(Combinaison_now.getval_case(2) + "");
     }//GEN-LAST:event_bt_down_3ActionPerformed
 
     private void bt_down_4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bt_down_4ActionPerformed
-        // TODO add your handling code here:
+        Combinaison_now.downval_case(3);
+        nb_chiffre_case_4.setText(Combinaison_now.getval_case(3) + "");
     }//GEN-LAST:event_bt_down_4ActionPerformed
 
     private void bt_up_2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bt_up_2ActionPerformed
-        // TODO add your handling code here:
+        Combinaison_now.upval_case(1);
+        nb_chiffre_case_2.setText(Combinaison_now.getval_case(1) + "");
     }//GEN-LAST:event_bt_up_2ActionPerformed
 
     private void bt_up_3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bt_up_3ActionPerformed
-        // TODO add your handling code here:
+        Combinaison_now.upval_case(2);
+        nb_chiffre_case_3.setText(Combinaison_now.getval_case(2) + "");
     }//GEN-LAST:event_bt_up_3ActionPerformed
 
     private void bt_up_4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bt_up_4ActionPerformed
-        // TODO add your handling code here:
+       Combinaison_now.upval_case(3);
+        nb_chiffre_case_4.setText(Combinaison_now.getval_case(3) + "");
     }//GEN-LAST:event_bt_up_4ActionPerformed
+
+    private void bt_testActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bt_testActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_bt_testActionPerformed
 
     /**
      * @param args the command line arguments

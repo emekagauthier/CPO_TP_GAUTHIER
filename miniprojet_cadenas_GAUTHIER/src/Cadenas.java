@@ -8,25 +8,40 @@
  * @author emeka
  */
 public class Cadenas {
-    int val_case1;
-    int val_case2;
-    int val_case3;
-    int val_case4;
+    int[] tab = new int[4];
+    int[] tab_soluce = new int [4];
+    
 
     public Cadenas(int val_case1, int val_case2, int val_case3, int val_case4) {
-        this.val_case1 = val_case1;
-        this.val_case2 = val_case2;
-        this.val_case3 = val_case3;
-        this.val_case4 = val_case4;
+       tab[0] = val_case1;
+       tab[1] = val_case2;
+       tab[2] = val_case3;
+       tab[3] = val_case4;
+       for (int i = 0; i<4 ; i++){
+           tab_soluce[i]= (int) (Math.random() * 10);
+       }
+       
     }
-
-    public int getVal_case1() {
-        return val_case1;
+    public int getval_case(int nb){
+        return tab[nb];
     }
-    public void upVal_case1() {
-         val_case1 += 1;
-    }
+    public void upval_case(int nb){
+        if (tab[nb]==9){
+            tab[nb]=9;}
+    else{
+            tab[nb]+=1;
+    } }
+    public void downval_case(int nb){
+        if (tab[nb]==0){
+            tab[nb]=0;}
+    else{
+            tab[nb]-=1;
+    } }
     
+    public int[] tester(){
+       
+    }
+                
       
     }
     
