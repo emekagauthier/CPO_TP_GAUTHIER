@@ -240,7 +240,12 @@ public class Interface extends javax.swing.JFrame {
     }//GEN-LAST:event_bt_up_4ActionPerformed
 
     private void bt_testActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bt_testActionPerformed
-        // TODO add your handling code here:
+        int [] resultat = new int[4];
+        resultat = Combinaison_now.tester();
+        nb_chiffre_exacts.setText(resultat[0]+"");
+        nb_chiffre_trop_hauts.setText(resultat[1]+"");
+        nb_chiffre_trop_bas.setText(resultat[2]+"");
+        nb_score.setText(resultat[3]+" sur 5");
     }//GEN-LAST:event_bt_testActionPerformed
 
     /**
