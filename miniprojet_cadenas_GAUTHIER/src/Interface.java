@@ -11,7 +11,6 @@ public class Interface extends javax.swing.JFrame {
     
     private static final java.util.logging.Logger logger = java.util.logging.Logger.getLogger(Interface.class.getName());
     // objet Cadenas Test
-    Cadenas Solution = new Cadenas(1,2,3,4);
     Cadenas Combinaison_now = new Cadenas(0,0,0,0);
     
     /**
@@ -179,6 +178,11 @@ public class Interface extends javax.swing.JFrame {
         getContentPane().add(nb_chiffre_trop_hauts, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 250, 30, 30));
 
         bt_restart.setText("Recommencer");
+        bt_restart.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                bt_restartActionPerformed(evt);
+            }
+        });
         getContentPane().add(bt_restart, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 330, -1, -1));
 
         txt_tentative.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
@@ -187,12 +191,12 @@ public class Interface extends javax.swing.JFrame {
         getContentPane().add(txt_tentative, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 230, 80, -1));
 
         nb_score.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        nb_score.setText("0 sur 5");
+        nb_score.setText("0 sur 10");
         nb_score.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
         getContentPane().add(nb_score, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 260, 60, 30));
 
         txt_encouragement.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        txt_encouragement.setText("Vous avez 5 tentatives. Bonne Mission !");
+        txt_encouragement.setText("Vous avez 10 tentatives. Bonne Mission !");
         getContentPane().add(txt_encouragement, new org.netbeans.lib.awtextra.AbsoluteConstraints(68, 10, 250, -1));
 
         pack();
@@ -245,8 +249,55 @@ public class Interface extends javax.swing.JFrame {
         nb_chiffre_exacts.setText(resultat[0]+"");
         nb_chiffre_trop_hauts.setText(resultat[1]+"");
         nb_chiffre_trop_bas.setText(resultat[2]+"");
-        nb_score.setText(resultat[3]+" sur 5");
+        if (resultat[3]==10){
+            txt_encouragement.setText("Tu a perdu ");
+            nb_score.setText(resultat[3]+" sur 10");
+            //Desactivation des touches du a la defaites
+            bt_down_1.setEnabled(false);
+            bt_down_2.setEnabled(false);
+            bt_down_3.setEnabled(false);
+            bt_down_4.setEnabled(false);
+            
+            bt_up_1.setEnabled(false);
+            bt_up_2.setEnabled(false);
+            bt_up_3.setEnabled(false);
+            bt_up_4.setEnabled(false);
+            
+            bt_test.setEnabled(false);
+        }
+        else{
+           nb_score.setText(resultat[3]+" sur 10"); 
+        }
+        
     }//GEN-LAST:event_bt_testActionPerformed
+
+    private void bt_restartActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bt_restartActionPerformed
+        Combinaison_now.restart();
+        //regnisialise les chiffre a zero
+        nb_chiffre_case_1.setText(Combinaison_now.getval_case(0) + "");
+        nb_chiffre_case_2.setText(Combinaison_now.getval_case(1) + "");
+        nb_chiffre_case_3.setText(Combinaison_now.getval_case(2) + "");
+        nb_chiffre_case_4.setText(Combinaison_now.getval_case(3) + "");
+        //renicialsie le score
+        nb_score.setText(0+" sur 10");
+        //regnicialise les valeur obtenu quand test effectuer
+        nb_chiffre_exacts.setText(0+"");
+        nb_chiffre_trop_hauts.setText(0+"");
+        nb_chiffre_trop_bas.setText(0+"");
+        
+//Reactive le fonctionnement des boutons
+        bt_down_1.setEnabled(true);
+        bt_down_2.setEnabled(true);
+        bt_down_3.setEnabled(true);
+        bt_down_4.setEnabled(true);
+            
+        bt_up_1.setEnabled(true);
+        bt_up_2.setEnabled(true);
+        bt_up_3.setEnabled(true);
+        bt_up_4.setEnabled(true);
+            
+        bt_test.setEnabled(true);
+    }//GEN-LAST:event_bt_restartActionPerformed
 
     /**
      * @param args the command line arguments

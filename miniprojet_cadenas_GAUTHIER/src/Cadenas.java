@@ -18,36 +18,56 @@ public class Cadenas {
        tab[1] = val_case2;
        tab[2] = val_case3;
        tab[3] = val_case4;
-       /*for (int i = 0; i<4 ; i++){
-           tab_soluce[i]= (int) (Math.random() * 10);
-       }*/
        tab_soluce[0] = 1;
        tab_soluce[1] = 2;
        tab_soluce[2] = 3;
        tab_soluce[3] = 4;
-       
-       
+       /*for (int i = 0; i<4 ; i++){
+           tab_soluce[i]= (int) (Math.random() * 10);
+       }*/
+         
     }
+    
     public int getval_case(int nb){
         return tab[nb];
     }
+    
     public void upval_case(int nb){
         if (tab[nb]==9){
             tab[nb]=9;}
     else{
             tab[nb]+=1;
     } }
+    
     public void downval_case(int nb){
         if (tab[nb]==0){
             tab[nb]=0;}
     else{
             tab[nb]-=1;
     } }
-    public int getval_soluce(int nb){
-        return tab_soluce[nb];
+    public void restart(){
+        // Reset l'écran de combinaison
+        for (int i = 0; i<4 ; i++){
+           tab[i]= 0;}
+        // Crée une nouvelel solution
+        for (int i = 0; i<4 ; i++){
+           tab_soluce[i]= (int) (Math.random() * 10);}
+        
+        //Remet a zero le compteur de tentative 
+        int a = nb_tentative(0);
     }
-     public int nb_tentative(){
-        return nb_tentative+=1;
+    /*public int getval_soluce(int nb){
+        return tab_soluce[nb];
+    }*/
+    
+    public int nb_tentative(int nb){
+        if(nb==1){
+           return nb_tentative+=1; 
+        }
+        else{
+            return nb_tentative=0;
+        }
+        
     }
     
     public int[] tester(){
@@ -64,7 +84,7 @@ public class Cadenas {
             }
             
         }
-        resultat_test[3]=nb_tentative();
+        resultat_test[3]=nb_tentative(1);
         return resultat_test ;  
     }
                 
