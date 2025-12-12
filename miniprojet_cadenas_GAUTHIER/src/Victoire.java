@@ -78,9 +78,9 @@ public class Victoire extends javax.swing.JFrame {
     }//GEN-LAST:event_bt_menuActionPerformed
 
     private void bt_restart1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bt_restart1ActionPerformed
-        Interface I = new Interface();
+        /*Interface I = new Interface();
         I.setVisible(true);
-        this.dispose();
+        this.dispose();*/
     }//GEN-LAST:event_bt_restart1ActionPerformed
 
     private void bt_leaveActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bt_leaveActionPerformed

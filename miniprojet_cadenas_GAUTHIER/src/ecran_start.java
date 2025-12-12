@@ -27,9 +27,12 @@ public class ecran_start extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        jButton1 = new javax.swing.JButton();
         Titre_accueil = new javax.swing.JLabel();
         bt_start = new javax.swing.JButton();
         bt_leave = new javax.swing.JButton();
+
+        jButton1.setText("jButton1");
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
@@ -48,7 +51,7 @@ public class ecran_start extends javax.swing.JFrame {
                 bt_startActionPerformed(evt);
             }
         });
-        getContentPane().add(bt_start, new org.netbeans.lib.awtextra.AbsoluteConstraints(147, 106, 104, 36));
+        getContentPane().add(bt_start, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 110, 104, 36));
 
         bt_leave.setFont(new java.awt.Font("Segoe UI Emoji", 1, 24)); // NOI18N
         bt_leave.setText("Leave");
@@ -57,13 +60,13 @@ public class ecran_start extends javax.swing.JFrame {
                 bt_leaveActionPerformed(evt);
             }
         });
-        getContentPane().add(bt_leave, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 210, -1, -1));
+        getContentPane().add(bt_leave, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 200, -1, -1));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
     private void bt_startActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bt_startActionPerformed
-        Interface I = new Interface();
+        Selectiv_nb_tentative I = new Selectiv_nb_tentative();
         I.setVisible(true);
         this.dispose();
     }//GEN-LAST:event_bt_startActionPerformed
@@ -101,5 +104,6 @@ public class ecran_start extends javax.swing.JFrame {
     private javax.swing.JLabel Titre_accueil;
     private javax.swing.JButton bt_leave;
     private javax.swing.JButton bt_start;
+    private javax.swing.JButton jButton1;
     // End of variables declaration//GEN-END:variables
 }

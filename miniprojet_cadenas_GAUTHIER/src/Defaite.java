@@ -87,9 +87,9 @@ public class Defaite extends javax.swing.JFrame {
     }//GEN-LAST:event_bt_leaveActionPerformed
 
     private void bt_restartActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bt_restartActionPerformed
-        Interface I = new Interface();
+        /*Interface I = new Interface();
         I.setVisible(true);
-        this.dispose();
+        this.dispose();*/
     }//GEN-LAST:event_bt_restartActionPerformed
 
     /**

@@ -12,12 +12,17 @@ public class Interface extends javax.swing.JFrame {
     private static final java.util.logging.Logger logger = java.util.logging.Logger.getLogger(Interface.class.getName());
     // objet Cadenas Test
     Cadenas Combinaison_now = new Cadenas(0,0,0,0);
+    int nb_tentative;
     
     /**
      * Creates new form Interface
+     * @param nb_tentative
      */
-    public Interface() {
+    public Interface(int nb_tentative) {
+        
+        this.nb_tentative= nb_tentative;
         initComponents();
+        
     }
 
     /**
@@ -249,7 +254,7 @@ public class Interface extends javax.swing.JFrame {
         nb_chiffre_exacts.setText(resultat[0]+"");
         nb_chiffre_trop_hauts.setText(resultat[1]+"");
         nb_chiffre_trop_bas.setText(resultat[2]+"");
-        if (resultat[3]==10){
+        if (resultat[3]==nb_tentative){
             // txt_encouragement.setText("Tu a perdu ");
             nb_score.setText(resultat[3]+" sur 10");
             //Desactivation des touches du a la defaites
@@ -330,7 +335,7 @@ public class Interface extends javax.swing.JFrame {
         //</editor-fold>
 
         /* Create and display the form */
-        java.awt.EventQueue.invokeLater(() -> new Interface().setVisible(true));
+        java.awt.EventQueue.invokeLater(() -> new Interface(10).setVisible(true));
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
