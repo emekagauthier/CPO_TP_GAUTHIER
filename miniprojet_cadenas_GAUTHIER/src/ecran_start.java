@@ -29,13 +29,16 @@ public class ecran_start extends javax.swing.JFrame {
 
         Titre_accueil = new javax.swing.JLabel();
         bt_start = new javax.swing.JButton();
+        bt_leave = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         Titre_accueil.setFont(new java.awt.Font("Segoe UI Black", 1, 24)); // NOI18N
         Titre_accueil.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        Titre_accueil.setText("Bienvenu sur Cadenas");
+        Titre_accueil.setText("Bienvenue  sur Cadenas");
         Titre_accueil.setBorder(new javax.swing.border.MatteBorder(null));
+        getContentPane().add(Titre_accueil, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 25, 400, -1));
 
         bt_start.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
         bt_start.setText("Start");
@@ -45,26 +48,16 @@ public class ecran_start extends javax.swing.JFrame {
                 bt_startActionPerformed(evt);
             }
         });
+        getContentPane().add(bt_start, new org.netbeans.lib.awtextra.AbsoluteConstraints(147, 106, 104, 36));
 
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
-        getContentPane().setLayout(layout);
-        layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(Titre_accueil, javax.swing.GroupLayout.DEFAULT_SIZE, 400, Short.MAX_VALUE)
-            .addGroup(layout.createSequentialGroup()
-                .addGap(147, 147, 147)
-                .addComponent(bt_start, javax.swing.GroupLayout.PREFERRED_SIZE, 104, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-        );
-        layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGap(25, 25, 25)
-                .addComponent(Titre_accueil)
-                .addGap(46, 46, 46)
-                .addComponent(bt_start, javax.swing.GroupLayout.PREFERRED_SIZE, 36, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(158, Short.MAX_VALUE))
-        );
+        bt_leave.setFont(new java.awt.Font("Segoe UI Emoji", 1, 24)); // NOI18N
+        bt_leave.setText("Leave");
+        bt_leave.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                bt_leaveActionPerformed(evt);
+            }
+        });
+        getContentPane().add(bt_leave, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 210, -1, -1));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -74,6 +67,10 @@ public class ecran_start extends javax.swing.JFrame {
         I.setVisible(true);
         this.dispose();
     }//GEN-LAST:event_bt_startActionPerformed
+
+    private void bt_leaveActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bt_leaveActionPerformed
+        this.dispose();
+    }//GEN-LAST:event_bt_leaveActionPerformed
 
     /**
      * @param args the command line arguments
@@ -102,6 +99,7 @@ public class ecran_start extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel Titre_accueil;
+    private javax.swing.JButton bt_leave;
     private javax.swing.JButton bt_start;
     // End of variables declaration//GEN-END:variables
 }

@@ -35,7 +35,7 @@ public class Victoire extends javax.swing.JFrame {
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jLabel1.setFont(new java.awt.Font("Viner Hand ITC", 1, 36)); // NOI18N
+        jLabel1.setFont(new java.awt.Font("Stencil", 0, 48)); // NOI18N
         jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel1.setText("VICTORY");
         getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 10, 228, -1));
@@ -78,7 +78,9 @@ public class Victoire extends javax.swing.JFrame {
     }//GEN-LAST:event_bt_menuActionPerformed
 
     private void bt_restart1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bt_restart1ActionPerformed
-        
+        Interface I = new Interface();
+        I.setVisible(true);
+        this.dispose();
     }//GEN-LAST:event_bt_restart1ActionPerformed
 
     private void bt_leaveActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bt_leaveActionPerformed

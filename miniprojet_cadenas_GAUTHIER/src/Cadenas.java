@@ -19,7 +19,7 @@ public class Cadenas {
        tab[2] = val_case3;
        tab[3] = val_case4;
        for (int i = 0; i<4 ; i++){
-           tab_soluce[i]= (int) (Math.random() * 10);
+           tab_soluce[i]= (int) (Math.random() * 10); 
        }
          
     }
