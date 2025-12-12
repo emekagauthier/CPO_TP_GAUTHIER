@@ -75,6 +75,7 @@ public class Victoire extends javax.swing.JFrame {
         ecran_start I = new ecran_start();
         I.setVisible(true);
         this.dispose();
+        //llllll
     }//GEN-LAST:event_bt_menuActionPerformed
 
     private void bt_restart1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bt_restart1ActionPerformed
