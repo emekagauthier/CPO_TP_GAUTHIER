@@ -28,6 +28,9 @@ public class Defaite extends javax.swing.JFrame {
     private void initComponents() {
 
         txt_defeat = new javax.swing.JLabel();
+        bt_restart = new javax.swing.JButton();
+        bt_menu = new javax.swing.JButton();
+        bt_leave = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
@@ -35,10 +38,45 @@ public class Defaite extends javax.swing.JFrame {
         txt_defeat.setFont(new java.awt.Font("Viner Hand ITC", 1, 36)); // NOI18N
         txt_defeat.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         txt_defeat.setText("Defeat");
-        getContentPane().add(txt_defeat, new org.netbeans.lib.awtextra.AbsoluteConstraints(136, 114, 133, -1));
+        txt_defeat.setBorder(javax.swing.BorderFactory.createTitledBorder(""));
+        getContentPane().add(txt_defeat, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 10, 170, -1));
+
+        bt_restart.setFont(new java.awt.Font("Segoe UI Emoji", 1, 18)); // NOI18N
+        bt_restart.setText("Recommencer");
+        bt_restart.setBorder(javax.swing.BorderFactory.createEtchedBorder());
+        getContentPane().add(bt_restart, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 120, -1, -1));
+
+        bt_menu.setFont(new java.awt.Font("Segoe UI Semibold", 1, 18)); // NOI18N
+        bt_menu.setText("Menu");
+        bt_menu.setBorder(javax.swing.BorderFactory.createEtchedBorder());
+        bt_menu.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                bt_menuActionPerformed(evt);
+            }
+        });
+        getContentPane().add(bt_menu, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 120, -1, -1));
+
+        bt_leave.setFont(new java.awt.Font("Segoe UI Emoji", 1, 24)); // NOI18N
+        bt_leave.setText("Leave");
+        bt_leave.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                bt_leaveActionPerformed(evt);
+            }
+        });
+        getContentPane().add(bt_leave, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 180, -1, -1));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void bt_menuActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bt_menuActionPerformed
+        ecran_start I = new ecran_start();
+        I.setVisible(true);
+        this.dispose();
+    }//GEN-LAST:event_bt_menuActionPerformed
+
+    private void bt_leaveActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bt_leaveActionPerformed
+        this.dispose();
+    }//GEN-LAST:event_bt_leaveActionPerformed
 
     /**
      * @param args the command line arguments
@@ -66,6 +104,9 @@ public class Defaite extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton bt_leave;
+    private javax.swing.JButton bt_menu;
+    private javax.swing.JButton bt_restart;
     private javax.swing.JLabel txt_defeat;
     // End of variables declaration//GEN-END:variables
 }

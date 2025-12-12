@@ -28,7 +28,9 @@ public class Victoire extends javax.swing.JFrame {
     private void initComponents() {
 
         jLabel1 = new javax.swing.JLabel();
-        bt_restart = new javax.swing.JButton();
+        bt_restart1 = new javax.swing.JButton();
+        bt_menu = new javax.swing.JButton();
+        bt_leave = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
@@ -36,14 +38,52 @@ public class Victoire extends javax.swing.JFrame {
         jLabel1.setFont(new java.awt.Font("Viner Hand ITC", 1, 36)); // NOI18N
         jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel1.setText("VICTORY");
-        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(78, 66, 228, -1));
+        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 10, 228, -1));
 
-        bt_restart.setFont(new java.awt.Font("Segoe UI Emoji", 1, 18)); // NOI18N
-        bt_restart.setText("Recommencer");
-        getContentPane().add(bt_restart, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 180, -1, -1));
+        bt_restart1.setFont(new java.awt.Font("Segoe UI Emoji", 1, 18)); // NOI18N
+        bt_restart1.setText("Recommencer");
+        bt_restart1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                bt_restart1ActionPerformed(evt);
+            }
+        });
+        getContentPane().add(bt_restart1, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 160, -1, -1));
+
+        bt_menu.setFont(new java.awt.Font("Segoe UI Semibold", 1, 18)); // NOI18N
+        bt_menu.setText("Menu");
+        bt_menu.setBorder(javax.swing.BorderFactory.createEtchedBorder());
+        bt_menu.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                bt_menuActionPerformed(evt);
+            }
+        });
+        getContentPane().add(bt_menu, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 90, -1, -1));
+
+        bt_leave.setFont(new java.awt.Font("Segoe UI Emoji", 1, 24)); // NOI18N
+        bt_leave.setText("Leave");
+        bt_leave.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                bt_leaveActionPerformed(evt);
+            }
+        });
+        getContentPane().add(bt_leave, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 250, -1, -1));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void bt_menuActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bt_menuActionPerformed
+        ecran_start I = new ecran_start();
+        I.setVisible(true);
+        this.dispose();
+    }//GEN-LAST:event_bt_menuActionPerformed
+
+    private void bt_restart1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bt_restart1ActionPerformed
+        
+    }//GEN-LAST:event_bt_restart1ActionPerformed
+
+    private void bt_leaveActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bt_leaveActionPerformed
+        this.dispose();
+    }//GEN-LAST:event_bt_leaveActionPerformed
 
     /**
      * @param args the command line arguments
@@ -71,7 +111,9 @@ public class Victoire extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton bt_restart;
+    private javax.swing.JButton bt_leave;
+    private javax.swing.JButton bt_menu;
+    private javax.swing.JButton bt_restart1;
     private javax.swing.JLabel jLabel1;
     // End of variables declaration//GEN-END:variables
 }
