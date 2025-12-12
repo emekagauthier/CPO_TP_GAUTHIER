@@ -18,13 +18,9 @@ public class Cadenas {
        tab[1] = val_case2;
        tab[2] = val_case3;
        tab[3] = val_case4;
-       tab_soluce[0] = 1;
-       tab_soluce[1] = 2;
-       tab_soluce[2] = 3;
-       tab_soluce[3] = 4;
-       /*for (int i = 0; i<4 ; i++){
+       for (int i = 0; i<4 ; i++){
            tab_soluce[i]= (int) (Math.random() * 10);
-       }*/
+       }
          
     }
     
@@ -49,7 +45,7 @@ public class Cadenas {
         // Reset l'écran de combinaison
         for (int i = 0; i<4 ; i++){
            tab[i]= 0;}
-        // Crée une nouvelel solution
+        // Crée une nouvelle solution
         for (int i = 0; i<4 ; i++){
            tab_soluce[i]= (int) (Math.random() * 10);}
         

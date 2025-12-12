@@ -250,7 +250,7 @@ public class Interface extends javax.swing.JFrame {
         nb_chiffre_trop_hauts.setText(resultat[1]+"");
         nb_chiffre_trop_bas.setText(resultat[2]+"");
         if (resultat[3]==10){
-            txt_encouragement.setText("Tu a perdu ");
+            // txt_encouragement.setText("Tu a perdu ");
             nb_score.setText(resultat[3]+" sur 10");
             //Desactivation des touches du a la defaites
             bt_down_1.setEnabled(false);
@@ -264,6 +264,15 @@ public class Interface extends javax.swing.JFrame {
             bt_up_4.setEnabled(false);
             
             bt_test.setEnabled(false);
+            Defaite I = new Defaite();
+            I.setVisible(true);
+            this.dispose();
+        }
+        if (resultat[0]==4){
+            Victoire I = new Victoire();
+            I.setVisible(true);
+            this.dispose();
+            
         }
         else{
            nb_score.setText(resultat[3]+" sur 10"); 
@@ -273,14 +282,14 @@ public class Interface extends javax.swing.JFrame {
 
     private void bt_restartActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bt_restartActionPerformed
         Combinaison_now.restart();
-        //regnisialise les chiffre a zero
+        // réinitialise les chiffre a zero
         nb_chiffre_case_1.setText(Combinaison_now.getval_case(0) + "");
         nb_chiffre_case_2.setText(Combinaison_now.getval_case(1) + "");
         nb_chiffre_case_3.setText(Combinaison_now.getval_case(2) + "");
         nb_chiffre_case_4.setText(Combinaison_now.getval_case(3) + "");
-        //renicialsie le score
+        // réinitialise le score
         nb_score.setText(0+" sur 10");
-        //regnicialise les valeur obtenu quand test effectuer
+        // réinitialise les valeur obtenu quand test effectuer
         nb_chiffre_exacts.setText(0+"");
         nb_chiffre_trop_hauts.setText(0+"");
         nb_chiffre_trop_bas.setText(0+"");
