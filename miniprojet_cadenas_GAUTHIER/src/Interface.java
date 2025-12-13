@@ -19,8 +19,8 @@ public class Interface extends javax.swing.JFrame {
      * @param nb_tentative
      */
     public Interface(int nb_tentative) {
-        
         this.nb_tentative= nb_tentative;
+        
         initComponents();
         
     }
@@ -256,7 +256,7 @@ public class Interface extends javax.swing.JFrame {
         nb_chiffre_trop_bas.setText(resultat[2]+"");
         if (resultat[3]==nb_tentative){
             // txt_encouragement.setText("Tu a perdu ");
-            nb_score.setText(resultat[3]+" sur 10");
+            nb_score.setText(resultat[3]+" sur "+nb_tentative);
             //Desactivation des touches du a la defaites
             bt_down_1.setEnabled(false);
             bt_down_2.setEnabled(false);
@@ -280,7 +280,7 @@ public class Interface extends javax.swing.JFrame {
             
         }
         else{
-           nb_score.setText(resultat[3]+" sur 10"); 
+           nb_score.setText(resultat[3]+" sur "+nb_tentative); 
         }
         
     }//GEN-LAST:event_bt_testActionPerformed
